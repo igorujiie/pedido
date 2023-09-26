@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../scripts.js"></script>
+</head>
+
+<body>
+  <!--EXEMPLO DE GENERALIZAÇÃO-->
+  <header id="cabeçalho">
+    <h1>Pousada Serra Verde</h1>
+    <nav>
+      <!--EXEMPLO DE ESPECIALIZAÇÃO-->
+      <pre class="links"><a href= "../index.html">Home</a>  <a href= "apousada.html">A Pousada</a>  <a href= "reservas.html">Reservas</a>  <a href= "tarifas.html">Tarifas</a>  <a href= "comochegar.html">Como Chegar</a></pre>
+    </nav>
+  </header>
+
+  <section>
+    <header>
+      <h2>Reservas</h2>
+    </header>
+
+    <article>
+      <p>Você pode efetuar sua reserva pelo telefone (12) 4321-1234, ou pelo nosso site, seguindo os passos abaixo:</p>
+
+      <ol>
+        <li>Preencha o formulário a seguir.</li>
+        <li>Aguarde nosso contato telefônico, ou por email, para a confirmação da reserva.</li>
+        <li>Efetue a transferência do valor da reserva.</li>    <!--EXEMPLO DE ESPECIFICAÇÃO-->
+        <li>Envie o comprovante de transferência para o e-mail: <span style= "color:cyan"><ins>atendimento@pousadaserraverde.tur.br</ins></span>.</li>
+      </ol>
+
+      <p><b>Faça sua reserva agora na Pousada Serra Verde:</b></p>
+
+      <form oninput="saida.value=idade.value">     <!--oninput é pra marca da idade no range aparecer na frente-->
+        <fieldset>
+          <legend>Solicitação de Reserva</legend>
+          <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" onblur="verifyNome()">
+          </div>
+          <p><div>
+            <label for="idade">Idade</label>
+            <input type="range" id="idade" name="idade" min="18" value="18">
+            <output id="saida" for="idade"></output>
+            <label for="idade">ano(s)</label>
+          </div></p>
+          <div>
+            <label for="celular">Celular</label>
+            <input type="tel" id="celular" name="celular" placeholder="99 99999-9999" onblur="verifyCel()">
+          </div>
+          <p><div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" onblur="verifyEmail()">
+          </div></p>
+          <p><div>
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" onblur="verifyCidade()">
+            <label for="uf">UF</label>
+            <input list="capitais" id="uf" name="capital">
+            <datalist id="capitais">
+              <option value="SP">
+              <option value="RJ">
+              <option value="MG">
+            </datalist>
+          </div></p>
+          <div>
+            <fieldset>
+              <legend>Chalé</legend>
+              <input type="radio" id="econômico" name="categoria" value="Econômico" checked>
+              <label for="econômico">Econômico</label>
+              <input type="radio" id="standard"  name="categoria" value="Standard">
+              <label for="standard"> Standard</label>
+              <input type="radio" id="luxo"      name="categoria" value="Luxo">
+              <label for="luxo">     Luxo</label>
+              <input type="radio" id="família"   name="categoria" value="Família">
+              <label for="família">  Família</label>
+            </fieldset>
+          </div>
+          <p><div>
+            <label for="chegada">Chegada</label>
+            <input type="date" id="chegada" name="chegada">
+          </div></p>
+          <div>
+            <label for="partida">Partida</label>
+            <input type="date" id="partida" name="partida" onfocus="arrumaCor()">
+            <button name="diária" type="button" onclick="verifyDiárias()">Calcular Diárias</button>
+            <label for="diária" id="diária"></label>
+          </div>
+          <p><div>
+            <label for="adultos">Adultos</label>
+            <input type="number" id="adultos" name="adultos">
+          </div></p>
+          <div>
+            <label for="crianças">Crianças</label>
+            <input type="number" id="crianças" name="crianças" onchange="verify5anos()">
+            <label for="bebês">Até 5 anos</label>
+            <input type="number" id="bebês" name="bebês" onchange="verify5anos()">
+          </div>
+          <p><div>
+            <input type="checkbox" id="carro" name="carro" value="quero reservar vaga no estacionamento">
+            <label for="carro">Quero reservar uma vaga no estacionamento</label>
+          </div></p>
+          <p><div>
+            <label for="pagamento">Forma de Pagamento</label>
+            <select id="pagamento" name="pagamento">
+              <option value="TED/DOC">Transferência (TED/DOC)</option>
+              <option value="pix">Pix</option>
+              <option value="depósito">Depósito</option>
+            </select>
+          </div></p>
+          <div>
+            <label for="pedido">Se desejar, faça um pedido especial, faremos o possível para atendê-lo:</label>
+          </div>
+          <div>
+            <textarea id="pedido" name="pedido" rows="4" cols="59" maxlength="200"></textarea>
+          </div>
+          <div>
+            <button type="submit" onclick="confirmaEnvio()">Solicitar Reserva</button>
+          </div>
+        </fieldset>
+      </form>
+    </article>
+  </section>
+
+  <footer>
+    <p>Desenvolvido por Tech Hotelaria</p>
+  </footer>
+
+</body>
+</html>

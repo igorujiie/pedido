@@ -1,0 +1,36 @@
+#top {
+    background: rgb(231, 15, 26);
+    color: white;
+}
+#conteudo {
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+}
+body{
+    background-image: url(image/amor.jpg) bottom no-repeat;
+    background-size: 30%;
+}
+
+#btn{
+    background: rgb(222, 6, 6);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+#s{
+    background: rgb(227, 16, 16);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+}

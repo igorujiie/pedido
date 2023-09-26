@@ -1,0 +1,116 @@
+/*fundo principal fixo*/
+body {
+  background: url("midias/folhas.png") fixed;
+}
+
+/*cabeçalho*/
+#cabeçalho {
+  margin: 0px 0px 0px 200px;
+  height: 200px;
+  width: 950px;
+  text-align: center;
+  background: url("midias/paisagem.png") center no-repeat;
+}
+
+/*título principal*/
+header > h1 {
+  font-family: Courier New;
+  color: DarkOliveGreen;
+}
+
+/*título principal ao selecionar*/
+header > h1::selection {
+  text-shadow: 1px 2px;
+}
+
+/*titulo principal da página dos mapas*/
+.titulomapa {
+  margin: 100px 0px 0px 490px;
+  width: 400px;
+  background-color: DarkSlateGray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 35px;
+  color: lightgreen;
+}
+
+/*links principais*/
+header a {
+  text-decoration: none;
+  color: gray;
+  font-size: 20px;
+  font-family: cursive;
+  padding: 3px 30px 3px 30px;
+  border: 2px groove gray;
+  border-radius: 10px;
+  background: white;
+}
+
+/*links principais ao passar o mouse*/
+.links a:hover {
+  background: lightgreen;
+}
+
+/*links principais ao clicar*/
+.links a:active {
+  background: mediumseagreen;
+}
+
+/*fundo do meio da página*/
+section {
+  text-align: justify;
+  font-size: 20px;
+  margin: 0px 0px 0px 200px;
+  padding: 1px 1px 1px 1px;
+  width: 950px;
+  background: linear-gradient(DarkSlateGray, DarkSeaGreen);
+}
+
+/*títulos menores*/
+section h2 {
+  text-align: center;
+}
+
+/*lista*/
+ul + p {
+  font-size: 25px;
+}
+
+/*icones da lista*/
+ul li::marker {
+  content:"🌳";
+}
+
+/*imagens do home*/
+.imagemhome {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/*imagem das páginas secundárias*/
+.imagemmapa {
+  margin: 0px 0px 0px 550px;
+  padding: 0px;
+  height: 179px;
+}
+
+/*tabela*/
+table th{
+  background-color: green;
+}
+
+/*subtítulo*/
+.subtitulo {
+  text-align: center;
+}
+
+/*parte final (créditos do site)*/
+footer{
+  margin: 0px 0px 0px 200px;
+  padding: 1px 1px 1px 1px;
+  width: 950px;
+  text-align: center;
+  background:center rgb(74, 252, 252);
+}
